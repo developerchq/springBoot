@@ -1,4 +1,4 @@
 # http访问端口
-server:
-   port: 8081
+#server:
+#   port: 8081
 

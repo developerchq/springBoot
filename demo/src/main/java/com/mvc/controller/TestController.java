@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.mvc.controller;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @EnableAutoConfiguration
 @RequestMapping("/sample")
 public class TestController {
-	
 	@RequestMapping("/home")
     @ResponseBody
     String home() {
