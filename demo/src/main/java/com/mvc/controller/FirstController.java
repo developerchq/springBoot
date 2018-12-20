@@ -2,6 +2,9 @@ package com.mvc.controller;
 
 import com.mvc.model.FirstModel;
 import com.mvc.service.FirstService;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -15,14 +18,17 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @EnableAutoConfiguration
 public class FirstController {
+	private final Logger log = LoggerFactory.getLogger(FirstController.class);
     @Autowired
     private FirstService firstService;
 
     @RequestMapping("hello")
     @ResponseBody
     public String Hello(String str){
+    	log.info("FirstController hello method");
         FirstModel firstModel = new FirstModel();
         String reStr = firstService.getSomethingFromService(str,firstModel);
+        log.info("data:"+reStr);
         return reStr;
     }
 
