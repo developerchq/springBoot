@@ -1,5 +1,7 @@
 package com.mvc.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.mvc.model.FirstModel;
@@ -9,13 +11,16 @@ import com.mvc.model.FirstModel;
  */
 @Mapper
 public interface FirstModelMapper {
-    int deleteByPrimaryKey(Long id);
+	
+	List<FirstModel> findAll();
+	
+    int deleteByPrimaryKey(String id);
 
     int insert(FirstModel record);
 
     int insertSelective(FirstModel record);
 
-    FirstModel selectByPrimaryKey(Long id);
+    FirstModel selectByPrimaryKey(String id);
 
     int updateByPrimaryKeySelective(FirstModel record);
 

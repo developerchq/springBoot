@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>update page</title>
+</head>
+<body>
+<form action="/spring-boot/update" method="post">
+<table>
+<tr>
+　　<td><input name="id" readonly th:value="${firstModel.id}" /></td>
+　　<td><input name="userName" th:value="${firstModel.userName}" /></td>
+　　<td><input name="age" th:value="${firstModel.age}" /></td>
+<td><button type="submit">update</button></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>

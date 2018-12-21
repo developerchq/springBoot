@@ -1,5 +1,7 @@
 package com.mvc.service;
 
+import java.util.List;
+
 import com.mvc.model.FirstModel;
 
 
@@ -8,4 +10,9 @@ import com.mvc.model.FirstModel;
  */
 public interface FirstService  {
     public String getSomethingFromService(String str , FirstModel firstModel);
+    public List<FirstModel> findAll();
+    public FirstModel selectByPrimaryKey(String id);
+	public int update(FirstModel firstModel);
+	public int insert(FirstModel firstModel);
+	public int delete(String id);
 }

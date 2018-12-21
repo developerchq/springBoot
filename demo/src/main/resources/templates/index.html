@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>spring boot</title>
+</head>
+<body>
+<label th:text="${message}">message</label>
+<form action="/spring-boot/insert" method="post">
+<table>
+<tr>
+　　<th>ID</th>
+　　<th>UserName</th>
+　　<th>Age</th>
+   <th>Operation</th>
+</tr>
+<tr>
+　　<td><input name="id" /></td>
+　　<td><input name="userName"  /></td>
+　　<td><input name="age" /></td>
+<td><button type="submit">Insert</button></td>
+</tr>
+<tr th:each="firstModel:${list}">
+　　<td th:text="${firstModel.id}">ID</td>
+　　<td th:text="${firstModel.userName}">userName</td>
+　　<td th:text="${firstModel.age}">age</td>
+<td>
+<a href="update.html" th:href="@{/query/{id}(id=${firstModel.id})}">Update</a>
+<a href="update.html" th:href="@{/delete/{id}(id=${firstModel.id})}">Delete</a>
+</td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>
