@@ -35,7 +35,7 @@
   </delete>
   <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.mvc.model.FirstModel" >
     insert into first_table (id, userName, age)
-    values (#{id,jdbcType=BIGINT}, #{userName,jdbcType=VARCHAR}, #{age,jdbcType=BIGINT}
+    values (#{id,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{age,jdbcType=BIGINT}
       )
   </insert>
   <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.mvc.model.FirstModel" >

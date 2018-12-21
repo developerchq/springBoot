@@ -16,4 +16,10 @@ a simple demo of spring boot project
                    --templates【动态模板文件】
                    --application.properties【配置文件】
                    --logback.xml【日志配置】
+				   
+技术栈：
+spring boot 2.0
+mybatis 持久化
+mysql 数据库
+thymeleaf模板引擎渲染
                    
